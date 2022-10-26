@@ -1,6 +1,10 @@
 import './App.css'
+import './components/HomepageButtons.css'
+
 import logo from './Assets/Crown.gif'
-import signUpButton from "Buttons";
+import SignUpButton from './components/SignupButton';
+import LoginButton from './components/LoginButton';
+
 
 function App() {
   return (
@@ -8,9 +12,9 @@ function App() {
         <div>
           <img src={logo} alt="logo"></img>
         </div>
-        <section>
-          <signUpButton />
-          <loginButton />
+        <section className="homepage-btn">
+          <SignUpButton />
+          <LoginButton />
         </section>
       </div>
   );
