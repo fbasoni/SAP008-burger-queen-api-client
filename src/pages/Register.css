@@ -1,0 +1,18 @@
+  .registerPage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background: #ffffff;
+    font-size: calc(10px + 2vmin);
+    color: rgb(0, 0, 0);
+  }
+
+  input::placeholder {
+    color: rgb(48, 41, 41);
+  }
+
+  

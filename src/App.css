@@ -1,32 +1,5 @@
-body {
-  margin: 0;
-  padding: 0;
-  background: #151519;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-.homepage-btn {
-  display: flex;
-  gap: 2rem;
-  flex-direction: column;
-}
-
-.App-body {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
