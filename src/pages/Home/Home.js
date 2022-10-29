@@ -1,9 +1,9 @@
-import '../pages/Home.css';
-import '../components/HomepageButtons.css';
+import '../Home/Home.css';
+import '../../components/HomepageButtons.css';
 
-import logo from '../Assets/Crown.gif';
+import logo from '../../Assets/Crown.gif';
 // import SignUpButton from '../components/SignupButton';
-import LoginButton from '../components/LoginButton.js';
+import LoginButton from '../../components/LoginButton';
 
 
 function Home() {

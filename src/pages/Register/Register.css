@@ -1,0 +1,80 @@
+body{
+  margin:10px;
+}
+
+.content{
+  width: 500px;
+  margin: 0px auto;
+  position: relative; 
+  display: flex;
+  font-size: 0;
+  padding: 2%;
+  margin-top: 50px;
+}
+
+#cadastro{
+  position: absolute;
+  top: 0px;
+  width: 80%; 
+  padding: 30px 5% 20px 5%;
+  margin: center;
+  background: #fdfdfd;
+  border-radius: 5px solid #000000cc;
+}
+
+h1{
+  font-size: 25px;
+  color: #000000;
+  padding: 10px 0;
+  text-align: center;
+  padding-bottom: 30px;
+  text-align: left;
+}
+
+p{
+  margin-bottom:15px;
+}
+
+label{
+  color: #000000;
+  position: relative;
+  font-size: 18px; 
+}
+
+.formAction{
+  width: 95%;
+  margin-top: 4px;
+  padding: 10px;  
+  border: 1px solid #b2b2b2; 
+  border-radius: 5px; 
+  background-color: #F5F5F5;
+}
+
+.radioRegister{
+  cursor: pointer;
+  accent-color: red;
+}
+
+input[type="submit"]{
+  width: 50%;
+  cursor: pointer;  
+  background: #272735;
+  color: #fff;
+  padding: 8px 5px;
+  font-size: 15px;  
+  border: 1px solid; 
+  border-radius: 5px;
+  margin-left: 100px;
+}
+
+#backToPage{
+  width: 50%;
+  cursor: pointer;  
+  background: #c4c4c7;
+  color: #fff;
+  padding: 8px 5px;
+  font-size: 15px;  
+  border: 1px solid; 
+  border-radius: 5px; 
+  margin-left: 100px;
+}
