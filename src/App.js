@@ -1,22 +1,22 @@
-import './App.css'
-import './components/HomepageButtons.css'
-
-import logo from './Assets/Crown.gif'
-import SignUpButton from './components/SignupButton';
-import LoginButton from './components/LoginButton';
-
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // padrão config
+import Home from './pages/Home/Home.js';
+import Register from './pages/Register/Register.js';
 
 function App() {
+
   return (
-      <div className="App">
-        <div>
-          <img src={logo} alt="logo"></img>
-        </div>
-        <section className="homepage-btn">
-          <SignUpButton />
-          <LoginButton />
-        </section>
-      </div>
+    <Router>
+        <Routes>
+          <Route path="/" element={<Home />} >
+         </Route>
+
+         <Route path="/register" element={<Register />} >
+         </Route>
+
+      </Routes>
+
+    </Router >
   );
 }
 
