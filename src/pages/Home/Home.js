@@ -1,10 +1,10 @@
 import '../Home/Home.css';
 
 import logo from '../../Assets/Crown.gif';
-// import SignUpButton from '../components/SignupButton';
-import SignUpButton from '../../components/SignUpButton';
 
-import LoginButton from '../../components/LoginButton';
+import SignUpButton from '../../components/Homepage/SignUpButton';
+
+import LoginButton from '../../components/Homepage/LoginButton';
 
 
 function Home() {

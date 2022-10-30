@@ -1,0 +1,92 @@
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.font-fam {
+  font-family: 'Inter', sans-serif;
+}
+
+.login-page {
+  min-height: 100vh;
+  background: white;
+}
+
+.return-icon {
+  margin: 4vw 4vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.form-wrapper {
+  gap: 2rem;
+}
+
+.input-wrapper {
+  gap: 0.5rem;
+}
+
+.input-label, .login-title {
+  align-self: flex-start;
+  color: #2A2B2E;
+  font-size: 1.2rem;
+}
+
+.forgot-password {
+  align-self: flex-end;
+  text-decoration: none;
+  color: #B9411C;
+  font-size: 16px;
+  margin-top: -0.5rem;
+}
+
+.login-title {
+  position: absolute;
+  margin-left: -10vw;
+  margin-top: -53vh;
+  font-size: 1.8rem;
+}
+
+.login-input {
+  width: 48vw;
+  height: 3.5vh;
+  border: none;
+  border-radius: 3px;
+  background: #cececebb;
+  color: #7D7D7D;
+  padding-left: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.login-btn {
+  cursor: pointer;
+  background: #272735;
+  color: #fff;
+  padding: 0.6rem;
+  width: 30vw;
+  font-size: 1.3rem;
+  border: 1px solid;
+  border-radius: 10px;
+  margin-bottom: -5rem;
+  margin-top: 1rem;
+}
+
+.login-btn:focus {
+  background: #4f4f4f;
+  transition: 2s;
+}
+
+.no-account {
+  color: #7D7D7D;
+  font-size: 1rem;
+  margin-top: 5.5rem;
+}
+
+a.no-account {
+  color: #272735;
+  font-weight: 600;
+  text-decoration: underline;
+}

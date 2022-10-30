@@ -55,7 +55,7 @@ label{
   accent-color: red;
 }
 
-input[type="submit"]{
+.register-btn {
   width: 50%;
   cursor: pointer;  
   background: #272735;
@@ -64,17 +64,5 @@ input[type="submit"]{
   font-size: 15px;  
   border: 1px solid; 
   border-radius: 5px;
-  margin-left: 100px;
-}
-
-#backToPage{
-  width: 50%;
-  cursor: pointer;  
-  background: #c4c4c7;
-  color: #fff;
-  padding: 8px 5px;
-  font-size: 15px;  
-  border: 1px solid; 
-  border-radius: 5px; 
   margin-left: 100px;
 }

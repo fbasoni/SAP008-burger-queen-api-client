@@ -3,7 +3,7 @@ import styles from './SignUpButton.module.css';
 function SignUpButton() {
 
   function loadRegisterPage() {
-    window.open('/register')
+    window.location = '/register';
   }
 
   return (

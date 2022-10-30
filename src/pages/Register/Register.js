@@ -1,9 +1,14 @@
 import '../Register/Register.css';
 // import  '../../node_modules/bootstrap/dist/css/bootstrap.min.css'
+import ReturnButton from '../../components/Forms/ReturnButton';
+
 
 function Register() {
     return (
         <div className="registerPage">
+          <i>
+            <ReturnButton />
+          </i>
             <div class="content">
              <div id="cadastro">
                <form> 
@@ -24,7 +29,7 @@ function Register() {
                  </p>
 
                  <p> 
-                 <label>What do you work as?</label>
+                 <label>Select your working function:</label>
                  <br></br>
                  
                  <input type="radio" class="radioRegister" name="employees" required="required" value="cook"/>
@@ -34,10 +39,7 @@ function Register() {
                  </p>  
 
                  <p> 
-                 <input type="submit" id="btn-register" value="Register"/> 
-                 </p>
-                 <p> 
-                 <button id="backToPage">Back</button>
+                 <input type="submit" id="btn-register" className="register-btn" value="Register"/> 
                  </p>
              </form>
            </div> 
