@@ -1,7 +1,16 @@
-export default function SignUpButton() {
+import styles from './SignUpButton.module.css';
+
+function SignUpButton() {
+
+  function loadRegisterPage() {
+    window.open('/register')
+  }
+
   return (
   <div>
-    <button className="signup-button">Sign up</button>
+    <button onClick={loadRegisterPage} className={styles.signUpButton}>Sign up</button>
   </div>
   )
 }
+
+export default SignUpButton
