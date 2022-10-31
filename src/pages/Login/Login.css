@@ -65,3 +65,7 @@ a.no-account {
   font-weight: 600;
   text-decoration: underline;
 }
+
+a.no-account:focus {
+  color: #B9411C;
+}

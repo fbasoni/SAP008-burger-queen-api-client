@@ -7,14 +7,21 @@ import ReturnButton from '../../components/Forms/ReturnButton';
 import { useState } from 'react'
 
 function Login(){
-  function userLogin(e) {
-    e.preventDefault();
+  
+  const [email, setEmail] = useState();
+  const [password, setPassword] = useState();
+
+  function handleChange(e) {
+    setEmail(e.target.value)
+    setPassword(e.target.value)
+  }
+
+  function handleSubmit(e){
+    e.preventDefault()
     console.log('Usuário logado');
     console.log(`auth info: ${email} e ${password}`)
   }
 
-  const [email, setEmail] = useState();
-  const [password, setPassword] = useState();
 
   return (
     <section className="login-page font-fam flex-container">
@@ -24,14 +31,14 @@ function Login(){
       <section className="login-form flex-container">
         <h1 className="login-title">Welcome back!</h1>
 
-        <form onSubmit={userLogin} className="form-wrapper flex-container">
+        <form onSubmit={handleSubmit} className="form-wrapper flex-container">
           <Input
             type="email"
             text="E-mail"
             name="email-input"
             id="email-input"
             placeholder="Enter your e-mail..."
-            onChange={(e) => setEmail(e.target.value)}
+            onChange={handleChange}
           />
 
           <Input
@@ -40,7 +47,7 @@ function Login(){
             name="password"
             id="password"
             placeholder="Enter your password..."
-            onChange={(e) => setPassword(e.target.value)}
+            onChange={handleChange}
           />
 
           <a href="/reset" className="forgot-password">
