@@ -1,4 +1,4 @@
-.signup-button, .login-button {
+.signUpButton {
   border: none;
   background: #B9411C;
   width: 40vw;
@@ -10,18 +10,7 @@
   border-radius: 5px;
 }
 
-.login-button {
-  background-color: white;
-  color: black;
-}
-
-.signup-button:focus, .login-button:focus {
+.signUpButton:focus {
   background-color: #c65e3e;
   transition: 2s;
-}
-
-.login-button:focus {
-  background-color: rgb(24, 24, 24);
-  transition: 2s;
-  color: white;
 }

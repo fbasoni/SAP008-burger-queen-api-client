@@ -1,27 +1,30 @@
 import '../Home/Home.css';
-import '../../components/HomepageButtons.css';
 
 import logo from '../../Assets/Crown.gif';
-// import SignUpButton from '../components/SignupButton';
-import LoginButton from '../../components/LoginButton';
+
+import SignUpButton from '../../components/Homepage/SignUpButton';
+
+import LoginButton from '../../components/Homepage/LoginButton';
 
 
 function Home() {
 
-    function goRegister() {
-        window.open('/register')
-      }
-
   return (
-      <div className="Home">
-        <div>
-          <img src={logo} alt="logo"></img>
-        </div>
-        <section className="homepage-btn">
-        <button onClick={goRegister}>Sign Up</button>
-          <LoginButton />
-        </section>
+    <div className="Home">
+      <div>
+        <img src={logo} alt="logo"></img>
       </div>
+      <nav>
+        <ul className="homepage-btns">
+          <li>
+            <SignUpButton />
+          </li>
+          <li>
+            <LoginButton />
+          </li>
+        </ul>
+      </nav>
+    </div>
   );
 }
 

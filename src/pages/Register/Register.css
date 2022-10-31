@@ -1,80 +1,48 @@
-body{
-  margin:10px;
-}
-
-.content{
-  width: 500px;
-  margin: 0px auto;
-  position: relative; 
+.flex-container {
   display: flex;
-  font-size: 0;
-  padding: 2%;
-  margin-top: 50px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-#cadastro{
+.font-fam {
+  font-family: 'Inter', sans-serif;
+}
+
+.registerPage {
+  min-height: 100vh;
+  background: white;
+}
+
+.return-icon {
+  margin: 4vw 4vh;
   position: absolute;
-  top: 0px;
-  width: 80%; 
-  padding: 30px 5% 20px 5%;
-  margin: center;
-  background: #fdfdfd;
-  border-radius: 5px solid #000000cc;
+  top: 0;
+  left: 0;
 }
 
-h1{
-  font-size: 25px;
-  color: #000000;
-  padding: 10px 0;
-  text-align: center;
-  padding-bottom: 30px;
-  text-align: left;
+#register-title {
+  color: #2A2B2E;
+  font-size: 1.88rem;
+  margin-top: -1rem;
+  margin-bottom: 6rem;
+  margin-left: -10vw;
 }
 
-p{
-  margin-bottom:15px;
+.register-wrapper {
+  gap: 2rem;
 }
 
-label{
-  color: #000000;
-  position: relative;
-  font-size: 18px; 
+.radio-btns {
+  vertical-align: middle;
+  color: #272735;
+  font-size: 1.2rem;
+  display: flex;
+  gap: 7rem;
 }
 
-.formAction{
-  width: 95%;
-  margin-top: 4px;
-  padding: 10px;  
-  border: 1px solid #b2b2b2; 
-  border-radius: 5px; 
-  background-color: #F5F5F5;
-}
-
-.radioRegister{
-  cursor: pointer;
-  accent-color: red;
-}
-
-input[type="submit"]{
-  width: 50%;
-  cursor: pointer;  
-  background: #272735;
-  color: #fff;
-  padding: 8px 5px;
-  font-size: 15px;  
-  border: 1px solid; 
-  border-radius: 5px;
-  margin-left: 100px;
-}
-
-#backToPage{
-  width: 50%;
-  cursor: pointer;  
-  background: #c4c4c7;
-  color: #fff;
-  padding: 8px 5px;
-  font-size: 15px;  
-  border: 1px solid; 
-  border-radius: 5px; 
-  margin-left: 100px;
+#radio-label {
+  align-self: flex-start;
+  color: #2A2B2E;
+  font-size: 1.2rem;
 }

@@ -1,0 +1,71 @@
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.font-fam {
+  font-family: 'Inter', sans-serif;
+}
+
+.login-page {
+  min-height: 100vh;
+  background: white;
+}
+
+.return-icon {
+  margin: 4vw 4vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.form-wrapper {
+  gap: 2rem;
+}
+
+.input-wrapper {
+  gap: 0.5rem;
+}
+
+.input-label, .login-title {
+  align-self: flex-start;
+  color: #2A2B2E;
+  font-size: 1.2rem;
+}
+
+.forgot-password {
+  align-self: flex-end;
+  text-decoration: none;
+  color: #B9411C;
+  font-size: 16px;
+  margin-top: -0.5rem;
+}
+
+.forgot-password:focus {
+  text-decoration: underline;
+}
+
+.login-title {
+  position: absolute;
+  margin-left: -10vw;
+  margin-top: -53vh;
+  font-size: 1.8rem;
+}
+
+.no-account {
+  color: #7D7D7D;
+  font-size: 1rem;
+  margin-top: 5.5rem;
+}
+
+a.no-account {
+  color: #272735;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+a.no-account:focus {
+  color: #B9411C;
+}
