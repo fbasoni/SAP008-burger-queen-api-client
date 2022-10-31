@@ -1,0 +1,17 @@
+.submitBtn {
+  cursor: pointer;
+  background: #272735;
+  color: #fff;
+  padding: 0.6rem;
+  width: 30vw;
+  font-size: 1.3rem;
+  border: 1px solid;
+  border-radius: 10px;
+  margin-bottom: -5rem;
+  margin-top: 1rem;
+}
+
+.submitBtn:focus {
+  background: #4f4f4f;
+  transition: 2s;
+}

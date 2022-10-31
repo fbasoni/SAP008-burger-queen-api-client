@@ -5,7 +5,11 @@ body {
     font-size: calc(10px + 2vmin);
     color: white;
 }
-  
+
+li {
+  list-style: none;
+}
+
 .Home {
   display: flex;
   justify-content: center;

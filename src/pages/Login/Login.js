@@ -1,4 +1,10 @@
 import '../Login/Login.css';
+import { FaRegUser } from "react-icons/fa";
+
+import Input from '../../components/Forms/Input'
+
+import SubmitButton from '../../components/Forms/SubmitButton';
+
 import ReturnButton from '../../components/Forms/ReturnButton';
 
 import { useState } from 'react'
@@ -20,31 +26,40 @@ function Login(){
       </i>
       <section className="login-form flex-container">
         <h1 className="login-title">Welcome back!</h1>
+
         <form onSubmit={userLogin} className="form-wrapper flex-container">
-          <div className="input-wrapper flex-container">
-            <label className="input-label">E-mail</label>
-            <input
-              className="login-input"
-              type="email"
-              placeholder="Enter your email..."
-              onChange={(e) => setEmail(e.target.value)}
-            ></input>
-          </div>
-          <div className="input-wrapper flex-container">
-            <label className="input-label">Password</label>
-            <input
-              className="login-input"
-              type="password"
-              placeholder="Enter your password..."
-              onChange={(e) => setPassword(e.target.value)}
-            ></input>
-          </div>
+          <Input
+            type="email"
+            text="E-mail"
+            name="email-input"
+            id="email-input"
+            placeholder="Enter your e-mail..."
+            onChange={(e) => setEmail(e.target.value)}
+          />
+
+          <Input
+            type="password"
+            text="Password"
+            name="password"
+            id="password"
+            placeholder="Enter your password..."
+            onChange={(e) => setPassword(e.target.value)}
+          />
+
           <a href="/reset" className="forgot-password">
             Forgot password
           </a>
-          <input type="submit" className="login-btn" value="Login"></input>
-          <p className="no-account">Don't have an account? <a href="/register" className="no-account">Sign up.</a></p>
+          
+          <SubmitButton type="submit" id="login-btn" value="Login" />
+      
+          <p className="no-account">
+            Don't have an account?{" "}
+            <a href="/register" className="no-account">
+              Sign up
+            </a>
+          </p>
         </form>
+
       </section>
     </section>
   );

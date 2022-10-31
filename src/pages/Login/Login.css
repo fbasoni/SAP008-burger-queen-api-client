@@ -43,40 +43,15 @@
   margin-top: -0.5rem;
 }
 
+.forgot-password:focus {
+  text-decoration: underline;
+}
+
 .login-title {
   position: absolute;
   margin-left: -10vw;
   margin-top: -53vh;
   font-size: 1.8rem;
-}
-
-.login-input {
-  width: 48vw;
-  height: 3.5vh;
-  border: none;
-  border-radius: 3px;
-  background: #cececebb;
-  color: #7D7D7D;
-  padding-left: 0.5rem;
-  font-size: 0.9rem;
-}
-
-.login-btn {
-  cursor: pointer;
-  background: #272735;
-  color: #fff;
-  padding: 0.6rem;
-  width: 30vw;
-  font-size: 1.3rem;
-  border: 1px solid;
-  border-radius: 10px;
-  margin-bottom: -5rem;
-  margin-top: 1rem;
-}
-
-.login-btn:focus {
-  background: #4f4f4f;
-  transition: 2s;
 }
 
 .no-account {

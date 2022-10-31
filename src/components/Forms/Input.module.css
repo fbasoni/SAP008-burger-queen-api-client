@@ -1,0 +1,28 @@
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form label {
+    align-self: flex-start;
+    color: #2A2B2E;
+    font-size: 1.2rem;
+}
+
+.form input {
+  width: 48vw;
+  height: 3.5vh;
+  border: none;
+  border-radius: 3px;
+  background: #cececebb;
+  color: #7D7D7D;
+  padding-left: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.form input::placeholder {
+  color: #7D7D7D;
+}

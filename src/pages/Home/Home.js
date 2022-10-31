@@ -10,15 +10,21 @@ import LoginButton from '../../components/Homepage/LoginButton';
 function Home() {
 
   return (
-      <div className="Home">
-        <div>
-          <img src={logo} alt="logo"></img>
-        </div>
-        <section className="homepage-btns">
-          <SignUpButton />
-          <LoginButton />
-        </section>
+    <div className="Home">
+      <div>
+        <img src={logo} alt="logo"></img>
       </div>
+      <nav>
+        <ul className="homepage-btns">
+          <li>
+            <SignUpButton />
+          </li>
+          <li>
+            <LoginButton />
+          </li>
+        </ul>
+      </nav>
+    </div>
   );
 }
 
