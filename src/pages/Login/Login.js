@@ -1,10 +1,7 @@
 import '../Login/Login.css';
-import { FaRegUser } from "react-icons/fa";
 
 import Input from '../../components/Forms/Input'
-
 import SubmitButton from '../../components/Forms/SubmitButton';
-
 import ReturnButton from '../../components/Forms/ReturnButton';
 
 import { useState } from 'react'
@@ -49,9 +46,9 @@ function Login(){
           <a href="/reset" className="forgot-password">
             Forgot password
           </a>
-          
+
           <SubmitButton type="submit" id="login-btn" value="Login" />
-      
+
           <p className="no-account">
             Don't have an account?{" "}
             <a href="/register" className="no-account">
@@ -59,7 +56,6 @@ function Login(){
             </a>
           </p>
         </form>
-
       </section>
     </section>
   );
