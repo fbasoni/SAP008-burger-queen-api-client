@@ -28,7 +28,6 @@ console.log(url)
 
 function Register() {
 
-
     return (
       <section className="registerPage font-fam flex-container">
         <i className="return-icon">
