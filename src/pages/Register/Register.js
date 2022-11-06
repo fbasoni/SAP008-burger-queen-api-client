@@ -4,27 +4,7 @@ import ReturnButton from '../../components/Forms/ReturnButton';
 import Input from '../../components/Forms/Input'
 import RadioButton from '../../components/Forms/RadioButton'
 import SubmitButton from '../../components/Forms/SubmitButton';
-
-const createUser = (e) => {
-  e.preventDefault()
-  const data = new FormData(e.target)
-  const url = fetch("https://lab-api-bq.onrender.com/users",{
-    method: "POST",
-    headers: {"Content-Type": "application/json; charset=UTF-8"},
-    body: JSON.stringify({
-    name: data.get("name-input"),
-    email: data.get("email-input"),
-    password: data.get("password-input"),
-    role: data.get("employees"),
-    restaurant: "Burguer Queen",
-  }),
-}).then(responses => responses.json())
-.catch((err) => {
-  console.log(err)
-});
-console.log(url)
-};
-
+import { createUser } from '../../data/ApiData.js';
 
 function Register() {
 
