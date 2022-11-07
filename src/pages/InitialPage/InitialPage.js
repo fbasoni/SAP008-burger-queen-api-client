@@ -1,4 +1,4 @@
-export function PageInicial() {
+export function InitialPage() {
         return (
             <div className="registerPage">
                 <h1>Logado!</h1>
@@ -6,4 +6,4 @@ export function PageInicial() {
         );
       }
     
-      export default PageInicial;
+      export default InitialPage;
