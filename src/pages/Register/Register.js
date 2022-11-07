@@ -1,8 +1,9 @@
 import '../Register/Register.css';
-import ReturnButton from '../../components/Forms/ReturnButton';
-import Input from '../../components/Forms/Input'
-import RadioButton from '../../components/Forms/RadioButton'
-import SubmitButton from '../../components/Forms/SubmitButton';
+import ReturnButton from '../../components/Forms/button/ReturnButton';
+import Input from '../../components/Forms/input/Input'
+import RadioButton from '../../components/Forms/radio/RadioButton'
+import SubmitButton from '../../components/Forms/button/SubmitButton';
+import { errorRegister } from '../../data/validation.js';
 import { createUser } from '../../data/api.js';
 import { useState }from 'react';
 import { useNavigate } from 'react-router-dom';
@@ -12,6 +13,7 @@ function Register() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [role, setRole] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
   const redirect = useNavigate();
   
   const createUserOnSubmit = (e) => {
@@ -20,13 +22,14 @@ function Register() {
     createUser(name, email, password, role)
       .then((res) => {
         if (res.status === 200) {
-          redirect('/initialPage');
+          redirect('/login');
           const response = res.json();
           console.log(response);
           return response;
         }
       })
-      .catch((error) => console.log(error));
+      .catch((error) => {
+        setErrorMessage(errorRegister(error))});
   }
   
   return (
@@ -88,6 +91,7 @@ function Register() {
               handleOnChange={(e) => setRole(e.target.value)}
             />
           </div>
+          {errorMessage && (<p id="errorCode"> {createUserOnSubmit} </p>)}
           <SubmitButton type="submit" id="register-btn" value="Register" />
           <p className="no-account">
             Already have an account?{" "}
@@ -103,17 +107,3 @@ function Register() {
   
   export default Register;
 
-
-  
-  // const setUserData = (e) => {
-  //   e.preventDefault();
-  //   createUser(name, email, password, role)
-  //   .then((responses) => {
-  //     if (responses.status === 200) {
-  //       window.location = '/pageInicial';
-  //       const res = responses.json();
-  //       console.log(res.token);
-  //     }
-  //   })
-  //   .catch((err) => console.log(err));
-  // }

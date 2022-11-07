@@ -1,7 +1,7 @@
 import "../Login/Login.css";
-import Input from "../../components/Forms/Input";
-import SubmitButton from "../../components/Forms/SubmitButton";
-import ReturnButton from "../../components/Forms/ReturnButton";
+import Input from "../../components/Forms/input/Input";
+import SubmitButton from "../../components/Forms/button/SubmitButton";
+import ReturnButton from "../../components/Forms/button/ReturnButton";
 import { createToken } from "../../data/api.js";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -15,14 +15,14 @@ function Login(){
   const getUserToken = (e) => {
     e.preventDefault();
     createToken(email, password)
-    .then((responses) => {
-      if (responses.status === 200) {
-        responses.json()
+    .then((response) => {
+      if (response.status === 200) {
+        response.json()
           .then((data) =>
             localStorage.setItem("employee", JSON.stringify(data)));
         redirect('/initialPage')
       } else {
-        console.log(responses.status);
+        console.log(response.status);
       }
     })
     .catch((error) => console.log(error))

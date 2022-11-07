@@ -1,4 +1,4 @@
-import returnButton from '../../Assets/icons/arrow-left.svg';
+import returnButton from '../../../Assets/icons/arrow-left.svg';
 
 function ReturnButton() {
   function returnToPreviousPage(){
