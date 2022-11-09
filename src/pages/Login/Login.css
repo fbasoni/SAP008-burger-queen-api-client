@@ -35,18 +35,6 @@
   font-size: 1.2rem;
 }
 
-.forgot-password {
-  align-self: flex-end;
-  text-decoration: none;
-  color: #B9411C;
-  font-size: 16px;
-  margin-top: -0.5rem;
-}
-
-.forgot-password:focus {
-  text-decoration: underline;
-}
-
 .login-title {
   position: absolute;
   margin-left: -10vw;
