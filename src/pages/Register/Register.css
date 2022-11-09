@@ -46,3 +46,9 @@
   color: #2A2B2E;
   font-size: 1.2rem;
 }
+
+.error-message {
+  color: rgb(148, 0, 0);
+  font-size: 17px;
+  margin: 0 0 -1rem 0;
+}

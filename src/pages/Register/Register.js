@@ -3,7 +3,13 @@ import ReturnButton from '../../components/Forms/button/ReturnButton';
 import Input from '../../components/Forms/input/Input'
 import RadioButton from '../../components/Forms/radio/RadioButton'
 import SubmitButton from '../../components/Forms/button/SubmitButton';
-import { errorRegister } from '../../data/validation.js';
+import {
+  handleRegisterErrors,
+  validateEmail,
+  validateName,
+  validatePassword,
+  validateRole,
+} from "../../data/validation.js";
 import { createUser } from '../../data/api.js';
 import { useState }from 'react';
 import { useNavigate } from 'react-router-dom';
@@ -21,18 +27,33 @@ function Register() {
     e.preventDefault();
     console.log(name, email, password, role)
 
-    createUser(name, email, password, role)
-      .then((response) => {
-        if (response.status >= 400 ){
-          const message = errorRegister(response.status)
-          setErrorMessage(message)
-        }
-        if (response.status === 200) {
-          redirect('/login');
-        }
-      })
-      .catch((error) => console.log(error))
-  }
+    const emailValidation = validateEmail(email);
+    const nameValidation = validateName(name);
+    const passwordValidation = validatePassword(password);
+    const roleValidation = validateRole(role);
+
+    if (nameValidation) {
+      setErrorMessage(nameValidation);
+    } else if (emailValidation){
+      setErrorMessage(emailValidation);
+    } else if(passwordValidation){
+      setErrorMessage(passwordValidation);
+    } else if (roleValidation) {
+      setErrorMessage(roleValidation);
+    } else {
+      createUser(name, email, password, role)
+        .then((response) => {
+          if (response.status >= 400) {
+            const message = handleRegisterErrors(response.status);
+            setErrorMessage(message);
+          } else if (response.status === 200) {
+            redirect("/login");
+          }
+        })
+        .catch((error) => console.log(error));
+    }
+    }
+    
   
   return (
     <section className="registerPage font-fam flex-container">
@@ -50,7 +71,6 @@ function Register() {
             text="Name"
             name="name-input"
             id="name-input"
-            required={true}
             placeholder="Enter your name..."
             handleOnChange={(e) => setName(e.target.value)}
           />
@@ -60,7 +80,6 @@ function Register() {
             text="E-mail"
             name="email-input"
             id="email-input-register"
-            required="required"
             placeholder="Enter your e-mail..."
             handleOnChange={(e) => setEmail(e.target.value)}
           />
@@ -70,7 +89,6 @@ function Register() {
             text="Password"
             name="password-input"
             id="password-input-register"
-            required="required"
             placeholder="Enter your password..."
             handleOnChange={(e) => setPassword(e.target.value)}
           />
@@ -80,7 +98,6 @@ function Register() {
               text="Cook"
               type="radio"
               name="employees"
-              required="required"
               value="cook"
               handleOnChange={(e) => setRole(e.target.value)}
             />
@@ -88,13 +105,15 @@ function Register() {
               text="Waiter"
               type="radio"
               name="employees"
-              required="required"
               value="waiter"
               handleOnChange={(e) => setRole(e.target.value)}
             />
           </div>
-          <p><font color="#b31010">{errorMessage}</font></p>
+
+          {errorMessage && ( <p className="error-message">{errorMessage}</p> )}
+
           <SubmitButton type="submit" id="register-btn" value="Register" />
+          
           <p className="no-account">
             Already have an account?{" "}
             <a href="/login" className="no-account">

@@ -2,6 +2,11 @@ import "../Login/Login.css";
 import Input from "../../components/Forms/input/Input";
 import SubmitButton from "../../components/Forms/button/SubmitButton";
 import ReturnButton from "../../components/Forms/button/ReturnButton";
+import {
+  handleLoginError,
+  validateEmail,
+  validatePassword,
+} from "../../data/validation.js";
 import { createToken } from "../../data/api.js";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -10,22 +15,38 @@ function Login(){
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
   const redirect = useNavigate();
+
+
 
   const getUserToken = (e) => {
     e.preventDefault();
-    createToken(email, password)
-    .then((response) => {
-      if (response.status === 200) {
-        response.json()
-          .then((data) =>
-            localStorage.setItem("employee", JSON.stringify(data)));
-        redirect('/initialPage')
-      } else {
-        console.log(response.status);
-      }
-    })
-    .catch((error) => console.log(error))
+
+    const emailValidation = validateEmail(email);
+    const passwordValidation = validatePassword(password);
+
+    if (emailValidation) {
+      setErrorMessage(emailValidation);
+    } 
+    else if (passwordValidation){
+      setErrorMessage(passwordValidation);
+    } 
+    else {
+      createToken(email, password)
+      .then((response) => {
+        if (response.status === 400) {
+          const message = handleLoginError(response.status);
+          setErrorMessage(message)
+        } else if (response.status === 200) {
+          response.json()
+            .then((data) =>
+              localStorage.setItem("employee", JSON.stringify(data)));
+          redirect('/initialPage')
+        }
+      })
+      .catch((error) => console.log(error))
+    }
   }
 
   return (
@@ -42,7 +63,6 @@ function Login(){
             text="E-mail"
             name="email-input"
             id="email-input"
-            required="required"
             placeholder="Enter your e-mail..." handleOnChange={(e) => setEmail(e.target.value)} 
           />
 
@@ -51,9 +71,10 @@ function Login(){
             text="Password"
             name="password"
             id="password"
-            required="required"
             placeholder="Enter your password..." handleOnChange={(e) => setPassword(e.target.value)}
           />
+
+          {errorMessage && ( <p className="error-message">{errorMessage}</p> )}
 
           <SubmitButton type="submit" id="login-btn" value="Login" />
 
@@ -69,4 +90,4 @@ function Login(){
   );
 }
 
-export default Login
+export default Login;
