@@ -16,20 +16,22 @@ function Register() {
   const [errorMessage, setErrorMessage] = useState('');
   const redirect = useNavigate();
   
+
   const createUserOnSubmit = (e) => {
     e.preventDefault();
     console.log(name, email, password, role)
+
     createUser(name, email, password, role)
-      .then((res) => {
-        if (res.status === 200) {
+      .then((response) => {
+        if (response.status >= 400 ){
+          const message = errorRegister(response.status)
+          setErrorMessage(message)
+        }
+        if (response.status === 200) {
           redirect('/login');
-          const response = res.json();
-          console.log(response);
-          return response;
         }
       })
-      .catch((error) => {
-        setErrorMessage(errorRegister(error))});
+      .catch((error) => console.log(error))
   }
   
   return (
@@ -91,7 +93,7 @@ function Register() {
               handleOnChange={(e) => setRole(e.target.value)}
             />
           </div>
-          {errorMessage && (<p id="errorCode"> {createUserOnSubmit} </p>)}
+          <p><font color="#b31010">{errorMessage}</font></p>
           <SubmitButton type="submit" id="register-btn" value="Register" />
           <p className="no-account">
             Already have an account?{" "}
