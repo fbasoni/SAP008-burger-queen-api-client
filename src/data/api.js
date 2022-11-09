@@ -20,6 +20,7 @@ export const createUser = (name, email, password, role) => {
   };
   console.log(postOptions)
   return fetch(url, postOptions)
+  .then(response => response.json());
 };
 
 export const createToken = (email, password) => {
@@ -37,3 +38,29 @@ export const createToken = (email, password) => {
   console.log(postOptions);
   return fetch(url, postOptions);
 };
+
+export const getToken = () => {
+  localStorage.getItem("token");
+}
+
+export const getProducts = async () => {
+  const url = getUrlEndpoint('products');
+
+  const getOptions = {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': getToken("token"),
+    },
+  }
+
+  console.log(getOptions)
+
+  return await fetch(url, getOptions)
+  .then((response) => response.json())
+  .then((data) => {
+    console.log(data)
+    return data;
+  })
+
+}

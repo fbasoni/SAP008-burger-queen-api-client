@@ -3,7 +3,7 @@ import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import Home from './pages/Home/Home.js';
 import Register from './pages/Register/Register.js';
 import Login from './pages/Login/Login.js';
-import InitialPage from './pages/InitialPage/InitialPage.js';
+import Menu from './pages/Menus/Menu.js';
 
 
 function App() {
@@ -18,7 +18,7 @@ function App() {
 
           <Route path="/login" element={<Login />}></Route>
 
-          <Route path="/initialPage" element={<InitialPage />}></Route>
+          <Route path="/Menu" element={<Menu />}></Route>
         </Routes>
       </Fragment>
     </BrowserRouter>

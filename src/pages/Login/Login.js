@@ -12,13 +12,10 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 function Login(){
-
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
   const redirect = useNavigate();
-
-
 
   const getUserToken = (e) => {
     e.preventDefault();
@@ -29,7 +26,7 @@ function Login(){
     if (emailValidation) {
       setErrorMessage(emailValidation);
     } 
-    else if (passwordValidation){
+    else if (passwordValidation) {
       setErrorMessage(passwordValidation);
     } 
     else {
@@ -38,11 +35,22 @@ function Login(){
         if (response.status === 400) {
           const message = handleLoginError(response.status);
           setErrorMessage(message)
+
         } else if (response.status === 200) {
-          response.json()
-            .then((data) =>
-              localStorage.setItem("employee", JSON.stringify(data)));
-          redirect('/initialPage')
+          //response.json()
+          // .then((data) => {
+              localStorage.setItem("token", response.token);
+              localStorage.setItem("id", response.id);
+              localStorage.setItem("email", response.email);
+              localStorage.setItem("role", response.role);
+              
+            if (response.role === 'cook') {
+              console.log('sou cozinheiro')
+            } else if (response.role === 'waiter') {
+              console.log('nao sou cozinheiro')
+            }
+          // })
+          redirect('/Menu')
         }
       })
       .catch((error) => console.log(error))
