@@ -22,7 +22,11 @@ export function validateEmail(email) {
 }
 
 export function validateName(name) {
+    const nameRegex = /^[a-záàâãéèêíïóôõöúçñ ]+$/i;
+    const validationName = nameRegex.test(name);
+
     if (!name) return "Please, enter your name."
+    if (!validationName) return "Please, enter your name, numbers are not accepted."
 }
 
 export function validatePassword(password) {
