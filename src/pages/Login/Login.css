@@ -69,3 +69,9 @@ a.no-account {
 a.no-account:focus {
   color: #B9411C;
 }
+
+.error-message {
+  color: rgb(148, 0, 0);
+  font-size: 17px;
+  margin: 0 0 -1rem 0;
+}
