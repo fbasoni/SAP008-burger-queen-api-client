@@ -47,7 +47,7 @@ function Register() {
             const message = handleRegisterErrors(response.status);
             setErrorMessage(message);
           } else if (response.status === 200) {
-            redirect("/login");
+            redirect('/login');
           }
         })
         .catch((error) => console.log(error));

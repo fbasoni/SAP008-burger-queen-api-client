@@ -4,6 +4,7 @@ import Home from './pages/Home/Home.js';
 import Register from './pages/Register/Register.js';
 import Login from './pages/Login/Login.js';
 import Menu from './pages/Menus/Menu.js';
+import Kitchen from './pages/Kitchen/Kitchen.js';
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
           <Route path="/login" element={<Login />}></Route>
 
           <Route path="/Menu" element={<Menu />}></Route>
+          <Route path="/Kitchen" element={<Kitchen />}></Route>
         </Routes>
       </Fragment>
     </BrowserRouter>

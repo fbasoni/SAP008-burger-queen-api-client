@@ -1,6 +1,6 @@
 function getUrlEndpoint(endpoint){
   const url = `https://lab-api-bq.onrender.com/${endpoint}`;
-  return url
+  return url;
 }
 
 export const createUser = (name, email, password, role) => {
@@ -18,8 +18,8 @@ export const createUser = (name, email, password, role) => {
       restaurant: 'Burguer Queen'
     }),
   };
-  console.log(postOptions)
-  return fetch(url, postOptions)
+  console.log(postOptions);
+  return fetch(url, postOptions);
 };
 
 export const createToken = (email, password) => {
@@ -39,7 +39,7 @@ export const createToken = (email, password) => {
 };
 
 export const getToken = () => {
-  return localStorage.getItem("token");
+  return localStorage.getItem('token');
 }
 
 export const getProducts = async () => {
@@ -50,7 +50,7 @@ export const getProducts = async () => {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
-      'Authorization': getToken("token"),
+      'Authorization': getToken('token'),
     },
   }
 
@@ -59,7 +59,7 @@ export const getProducts = async () => {
   return await fetch(url, getOptions)
   .then((response) => response.json())
   .then((data) => {
-   console.log(data)
+   console.log(data);
     return data;
   })
 

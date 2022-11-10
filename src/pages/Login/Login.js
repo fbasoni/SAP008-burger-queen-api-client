@@ -8,6 +8,7 @@ import {
   validatePassword,
 } from "../../data/validation.js";
 import { createToken } from "../../data/api.js";
+import { setStorage } from "../../data/storage.js"
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -34,24 +35,21 @@ function Login(){
       .then((response) => {
         if (response.status === 400) {
           const message = handleLoginError(response.status);
-          setErrorMessage(message)
+          setErrorMessage(message);
 
         } else if (response.status === 200) {
           response.json()
           .then((data) => {
-              localStorage.setItem("token", data.token);
-              localStorage.setItem("id", data.id);
-              localStorage.setItem("email", data.email);
-              localStorage.setItem("role", data.role);
-              localStorage.setItem("name", data.name);
-             //localStorage.setItem("session", JSON.stringify(data))
+             setStorage(data);
             if (data.role === 'cook') {
-              console.log('sou cozinheiro')
+              console.log('im a cook');
+              redirect('/Kitchen');
             } else if (data.role === 'waiter') {
-              console.log('nao sou cozinheiro')
+              console.log('im a waiter');
+              redirect('/Menu');
             }
            })
-          redirect('/Menu')
+          
         }
       })
       .catch((error) => console.log(error))

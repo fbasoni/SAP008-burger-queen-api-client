@@ -7,8 +7,8 @@ export function Menu() {
 
    getProducts();
   return (
-    <div className="registerPage">
-      <h1>Vamos comer!</h1>
+    <div>
+      <h1>🍗 preparing menu...</h1>
     </div>
   );
 }
