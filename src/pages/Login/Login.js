@@ -37,19 +37,20 @@ function Login(){
           setErrorMessage(message)
 
         } else if (response.status === 200) {
-          //response.json()
-          // .then((data) => {
-              localStorage.setItem("token", response.token);
-              localStorage.setItem("id", response.id);
-              localStorage.setItem("email", response.email);
-              localStorage.setItem("role", response.role);
-              
-            if (response.role === 'cook') {
+          response.json()
+          .then((data) => {
+              localStorage.setItem("token", data.token);
+              localStorage.setItem("id", data.id);
+              localStorage.setItem("email", data.email);
+              localStorage.setItem("role", data.role);
+              localStorage.setItem("name", data.name);
+             //localStorage.setItem("session", JSON.stringify(data))
+            if (data.role === 'cook') {
               console.log('sou cozinheiro')
-            } else if (response.role === 'waiter') {
+            } else if (data.role === 'waiter') {
               console.log('nao sou cozinheiro')
             }
-          // })
+           })
           redirect('/Menu')
         }
       })

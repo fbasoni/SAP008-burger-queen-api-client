@@ -20,7 +20,6 @@ export const createUser = (name, email, password, role) => {
   };
   console.log(postOptions)
   return fetch(url, postOptions)
-  .then(response => response.json());
 };
 
 export const createToken = (email, password) => {
@@ -40,10 +39,11 @@ export const createToken = (email, password) => {
 };
 
 export const getToken = () => {
-  localStorage.getItem("token");
+  return localStorage.getItem("token");
 }
 
 export const getProducts = async () => {
+ // console.log("getProducts");
   const url = getUrlEndpoint('products');
 
   const getOptions = {
@@ -54,12 +54,12 @@ export const getProducts = async () => {
     },
   }
 
-  console.log(getOptions)
+  //console.log(getOptions)
 
   return await fetch(url, getOptions)
   .then((response) => response.json())
   .then((data) => {
-    console.log(data)
+   console.log(data)
     return data;
   })
 
