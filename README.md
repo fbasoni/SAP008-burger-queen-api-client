@@ -1,6 +1,6 @@
 # Burger Queen
 
-![logo-readme](./src/Assets/readme/logo-readme.mp4)
+![logo-readme](./src/Assets/readme/logo-readme.gif)
 
 ***
 Status: Em desenvolvimento
