@@ -31,12 +31,13 @@
 ***
 
 ## 1. Introdução
-Burger Queen API Client foi o quarto projeto desenvolvido durante o bootcamp da Laboratória, cujo objetivo principal era o desenvolvimento de um sistema de comandas digital para um restaurante (fictício).
-O projeto foi desenvolvido através de consumo de uma [Rest API](https://lab-api-bq.onrender.com/api-docs/), e com o framework [React](https://reactjs.org/). 
-O objetivo de aprendizagem principal do projeto foi de aprender a construir uma _interface web_ usando o
-_framework_ React, aprendendo **como manter a interface e estado sincronizados**, e sobre o conceito de _estado da tela_, e como cada mudança no estado vai refletir na interface.
+Burger Queen API Client foi o quarto projeto desenvolvido durante o bootcamp da Laboratória, cujo objetivo principal era o desenvolvimento de um sistema de comandas digital para um restaurante (fictício). Foi desenvolvido em dupla, por Ellen e Fabiany.
 
-O processo de desenvolvimento englobou práticas chaves no desenvolvimento de um produto, desde o planejamento ao código; incluem-se metodologias ágeis, product design, storytelling, user stories, prototipação, versionamento de código, testes unitários e integração entre interface e servidor.  
+Foi desenvolvido através de consumo de uma [Rest API](https://lab-api-bq.onrender.com/api-docs/), e com o framework [React](https://reactjs.org/). 
+O objetivo de aprendizagem principal deste projeto foi de aprender a construir uma _interface web_ usando o
+_framework_ React, aprendendo **como manter a interface e estado sincronizados**, e sobre o conceito de _estado da tela_ - como cada mudança no estado vai refletir na interface.
+
+O processo de desenvolvimento englobou práticas chaves de desenvolvimento de produto, desde o planejamento ao código; incluem-se metodologias ágeis, product design, storytelling, user stories, prototipação, versionamento de código, testes unitários e integração entre interface e servidor.  
 
 
 ## 2. Resumo do projeto
@@ -62,11 +63,11 @@ Como um fast food 24 horas, o restaurante oferece dois tipos de serviço: café 
 
 ## 3. Organização do projeto
 Seguindo uma proposta de desenvolvimento ágil, a organização do projeto contou com uma série de práticas de Scrum. 
-O tempo de desenvolvimento foi estipulado por sprints, as quais foram divididas semanalmente, contando com cerimônias de retrospectiva, demo e planning. 
+O tempo de desenvolvimento foi estipulado em sprints, as quais foram divididas semanalmente, contando com cerimônias de retrospectiva, demo e planning. 
 
-As restropectivas foram feitas nas plataformas Miro e Metroretro, utilizando retro dashboard; avaliávamos a sprint passada com um olhar de crescimento: analisando o que funcionou e o que não, o que faltou, o que foi bom, e criano planos de ações para a próxima. 
+As restropectivas foram feitas nas plataformas Miro e Metroretro, utilizando retro dashboard. Nestas ocasiões, avaliávamos a sprint passada com um olhar de crescimento: analisando o que funcionou e o que não, o que faltou, o que foi bom, e criando planos de ações para a próxima. 
 
-O planejamento foi feito através da plataforma Trello, utilizando kanban board; com estruturação lógica de tasks, divisão de tasks a partir de features, definição de prioridades conforme uma média de valor x esforço demandados por determinada feature, e gerenciamento de trabalho colaborativo (fizemos pair programming para resolvermos problemas juntas, e aplicação de code review quando trabalhávamos individualmente).
+O planejamento foi feito através da plataforma Trello, utilizando kanban board; com estruturação lógica de tasks, divisão de tasks a partir de features, definição de prioridades de tasks conforme uma média de valor x esforço demandados por determinada feature, e gerenciamento de trabalho colaborativo (fizemos pair programming para resolvermos problemas juntas, e aplicação de code review quando trabalhávamos individualmente).
 
 As sprints foram programadas e planejadas conforme as demandas das histórias de usuários.
 
