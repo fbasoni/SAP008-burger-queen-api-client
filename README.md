@@ -132,15 +132,21 @@ Este projeto contou com quatro diferentes histórias de usuários, cada uma tend
 
 
 ## 5. Protótipos
-Nosso processo de prototipação abarcou o desenvolvimento de protótipos de baixa fidelidade, seguidos de versões de alta fidelidade e navegáveis. Criamos os protótipos com base em fluxogramas de telas, com o intuito de proporcionar uma experiência de manipulação acessível e simples para nossos usuários, considerando o contexto movimentado de um restaurante. 
+Nosso processo de prototipação abarcou o desenvolvimento de protótipos de baixa fidelidade, seguidos de versões de alta fidelidade, navegáveis. Criamos os protótipos com base em fluxogramas de telas, com o intuito de proporcionar uma experiência de manipulação acessível e simples para nossos usuários, considerando o contexto movimentado de um restaurante. 
 
-Utilizamos a plataforma de design digital Figma para o desenvolvimento dos protótipos finais com as versões navegáveis, através dos quais aplicamos testes de usabilidade para atestar o nível de intuição na utilização de nossa aplicação, e implementamos mudanças necessárias conforme o feedback recebido.
+Utilizamos o Figma para o desenvolvimento dos protótipos finais com as versões navegáveis, através dos quais aplicamos testes de usabilidade para atestar o nível de intuição na utilização de nossa aplicação, e implementamos mudanças necessárias conforme o feedback recebido.
 
-Devido à necessidade de a aplicação ser feita para tablet, nosso protótipo foi pensado a partir deste tipo de tela, de modo que trabalhamos uma perspectiva de design responsivo. 
+### 5.1 Telas
 
-Finalmente, nosso protótipo conta com oito tipos de telas, sendo as quais: página principal, de acesso imediato; páginas de cadastro e de login, as quais redirecionam para as páginas de menu (se o usuário for um garçom ou garçonete) e de cozinha (se o usuário for um ou uma chef); página de acompanhamento de pedidos em andamento e concluídos, acessível para ambos tipos de funcionários. 
+Devido à necessidade de a aplicação ser feita para _tablet_, nosso protótipo foi pensado a partir deste tipo de tela, de modo que trabalhamos uma perspectiva de design responsivo. 
 
-**Resultado final:**
+Finalmente, nosso protótipo conta com oito telas, sendo as quais: 
+- página principal, de acesso imediato; 
+- páginas de cadastro e de login, as quais redirecionam para as páginas de menu (se o usuário for um garçom ou garçonete) e de cozinha (se o usuário for um ou uma chef); 
+- página de acompanhamento de pedidos em andamento e concluídos, acessível para ambos tipos de funcionários. 
+
+
+### 5.2 Resultado final:
 
 ![Prototypes](./src/Assets/readme/prototypes.png)
 
