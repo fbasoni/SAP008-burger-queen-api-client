@@ -73,7 +73,7 @@ As sprints foram programadas e planejadas conforme as demandas das histórias de
 
 
 ## 4. Histórias de usuários
-Desenvolvemos as features da aplicação conforme demandas presentes nas histórias de usuários disponibilizadas pela Laboratória, de modo que precisamos concluir a anterior para iniciar a próxima, tendo atendido os seguintes critérios gerais:
+Desenvolvemos as features da aplicação conforme demandas presentes nas histórias de usuários disponibilizadas pela Laboratória, de modo que precisamos concluir a anterior para iniciar a próxima, tendo atendido aos seguintes critérios gerais:
 
 * Receber _code review_ de pelo menos uma parceira;
 * Fazer _testes_ unitários e testar o produto manualmente;
