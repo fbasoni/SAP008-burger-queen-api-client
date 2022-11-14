@@ -53,9 +53,9 @@ Como um fast food 24 horas, o restaurante oferece dois tipos de serviço: café 
 >clientes.
 
 **Problema resolvido pela aplicação:**
-A interface deve mostrar os dois menus (café da manhã e restante do dia), cada
-um com todos os seus _produtos_. O usuário deve poder escolher que _produtos_
-adicionar e a interface deve mostrar o _resumo do pedido_ com o custo total.
+>A interface deve mostrar os dois menus (café da manhã e restante do dia), cada
+>um com todos os seus _produtos_. O usuário deve poder escolher que _produtos_
+>adicionar e a interface deve mostrar o _resumo do pedido_ com o custo total.
 
 
 ## 3. Organização do projeto
