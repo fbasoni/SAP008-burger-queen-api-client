@@ -38,26 +38,27 @@ export const createToken = (email, password) => {
   return fetch(url, postOptions);
 };
 
-export const getToken = () => {
-
-   //return JSON.parse(localStorage.getItem("session"))
-   return localStorage.getItem("token")
+export const getSession = () => {
+  try {
+   return JSON.parse(localStorage.getItem('session'))
+  } catch (e) {
+   return null
+  }
    }
- 
 
 export const getProducts = async () => {
-  // const session = getSession();
-  // if (session === null) {
-  //   return false
-  // }
+  const session = getSession();
+  if (session === null) {
+    return false
+  }
   const url = getUrlEndpoint('products');
 
   const getOptions = {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
-      //'Authorization': session.token,
-      'Authorization': getToken("token"),
+      'Authorization': session.token,
+      // 'Authorization': getToken("token"),
     },
   }
   return await fetch(url, getOptions)

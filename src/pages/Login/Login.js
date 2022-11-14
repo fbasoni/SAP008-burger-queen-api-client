@@ -10,7 +10,7 @@ import {
 import { createToken } from "../../data/api.js";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import {setStorage} from "../../data/storage.js"
+//import {setStorage} from "../../data/storage.js"
 
 function Login(){
   const [email, setEmail] = useState('');
@@ -40,7 +40,7 @@ function Login(){
         } else if (response.status === 200) {
           response.json()
           .then((data) => {
-             setStorage(data);
+            localStorage.setItem("session", JSON.stringify(data))
             if (data.role === 'cook') {
               console.log('sou cozinheiro')
             } else if (data.role === 'waiter') {
