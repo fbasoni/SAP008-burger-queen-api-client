@@ -161,9 +161,3 @@ Finalmente, nosso protótipo conta com oito telas, sendo as quais:
 * Jest
 * Figma
 * Trello, Miro e Metroretro
-
-### Deploy
-
-* Veja a documentação [de deploy do Create React App](https://create-react-app.dev/docs/deployment).
-Você pode utilizar qualquer um dos serviços listados na documentação,
-sendo recomendado o Firebase, Vercel, Netlify, Github Pages ou Heroku.
