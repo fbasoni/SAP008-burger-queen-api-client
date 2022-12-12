@@ -3,7 +3,7 @@ function getUrlEndpoint(endpoint){
   return url;
 }
 
-export const createUser = (name, email, password, role) => {
+export const createUser = async (name, email, password, role) => {
   const url = getUrlEndpoint('users');
   const postOptions = {
     method: 'POST',
@@ -19,10 +19,10 @@ export const createUser = (name, email, password, role) => {
     }),
   };
   console.log(postOptions);
-  return fetch(url, postOptions);
+  return await fetch(url, postOptions);
 };
 
-export const createToken = (email, password) => {
+export const createToken = async (email, password) => {
   const url = getUrlEndpoint('auth');
   const postOptions = {
     method: 'POST',
@@ -35,7 +35,7 @@ export const createToken = (email, password) => {
     }),
   };
   console.log(postOptions);
-  return fetch(url, postOptions);
+  return await fetch(url, postOptions);
 };
 
 export const getSession = () => {

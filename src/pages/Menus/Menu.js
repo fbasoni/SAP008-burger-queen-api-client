@@ -9,40 +9,40 @@ export function Menu() {
  // console.log("Menu")
 
  const [products, setProducts] = useState([]);
- const [menu, setMenu] = useState('');
+ const [menuType, setMenuType] = useState([]);
  const [client, setClient] = useState('');
  const session = getSession();
 
  function menuBreakfast () {
-  setMenu('breakfast')
+  const filterProductsByBreakfast = products.filter((productMenu) => productMenu.type === 'breakfast');
+  setMenuType(filterProductsByBreakfast);
  }
 
  function menuAllDay () {
-  setMenu('all-day')
+  const filterProductsByAllDay = products.filter((productMenu) => productMenu.type === 'all-day');
+  setMenuType(filterProductsByAllDay);
  }
 
  useEffect(() => {
   localStorage.setItem("client", client)
-  console.log(client);
   getProducts()
     .then((products) => {
-    const filterProducts =  products.filter((productMenu) => productMenu.type === menu)
-    setProducts(filterProducts)
+    setProducts(products)
     })
     
- })
+ }, [])
 
 
   return (
     <div>
-      <h1> 🍗 Wellcome, {session.name}</h1>
+      <h1> 🍗 Welcome, {session.name}</h1>
       <section>
         <input className="clientInput" onChange={(e) => setClient(e.target.value)} type="text" placeholder="Enter client name" ></input>
         <p>Client:{client}</p>
         <br></br>
         <button type="button" id="Breakfast-btn" className="menuButton" onClick={menuBreakfast}>Breakfast</button>
         <button type="button" id="Allday-btn" className="menuButton" onClick={menuAllDay}>All-day</button>
-        {products.map((product) => <ProductsCard key={product.id}>{product}</ProductsCard>)}
+        {menuType.map((product) => <ProductsCard key={product.id}>{product}</ProductsCard>)}
       </section>
     </div>
   );
