@@ -140,7 +140,7 @@ Utilizamos o Figma para o desenvolvimento dos protótipos finais com as versões
 
 Devido à necessidade de a aplicação ser feita para _tablet_, nosso protótipo foi pensado a partir deste tipo de tela, de modo que trabalhamos uma perspectiva de design responsivo. 
 
-Finalmente, nosso protótipo conta com oito telas, sendo as quais: 
+Finalmente, nosso design conta com oito telas, sendo as quais: 
 - página principal, de acesso imediato; 
 - páginas de cadastro e de login, as quais redirecionam para as páginas de menu (se o usuário for um garçom ou garçonete) e de cozinha (se o usuário for um ou uma chef); 
 - página de acompanhamento de pedidos em andamento e concluídos, acessível para ambos tipos de funcionários. 
