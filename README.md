@@ -154,5 +154,6 @@ Finalmente, nosso design conta com oito telas, sendo as quais:
 ## 6. Ferramentas
 * React
 * Rest API
+* CSS Modules
 * Figma
 * Trello, Miro e Metroretro
