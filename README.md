@@ -152,12 +152,7 @@ Finalmente, nosso design conta com oito telas, sendo as quais:
 
 
 ## 6. Ferramentas
-* [npm-scripts](https://docs.npmjs.com/misc/scripts)
-* [Babel](https://babeljs.io/)
-* [webpack](https://webpack.js.org/)
 * React
-* Postman
 * Rest API
-* Jest
 * Figma
 * Trello, Miro e Metroretro
