@@ -31,7 +31,7 @@
 ***
 
 ## 1. Introdução
-Burger Queen API Client foi o quarto projeto desenvolvido durante o bootcamp da Laboratória, cujo objetivo principal era o desenvolvimento de um sistema de comandas digital para um restaurante (fictício). Foi desenvolvido em dupla, por Ellen e Fabiany.
+Burger Queen API Client foi o quarto projeto desenvolvido durante o bootcamp da Laboratória, cujo objetivo principal era o desenvolvimento de um sistema de comandas digital para um restaurante (fictício).
 
 Foi desenvolvido através de consumo de uma [Rest API](https://lab-api-bq.onrender.com/api-docs/), e com o framework [React](https://reactjs.org/). 
 O objetivo de aprendizagem principal deste projeto foi de aprender a construir uma _interface web_ usando o
