@@ -13,7 +13,6 @@
 
 .menuButton:focus {
   background-color: rgb(24, 24, 24);
-  transition: 2s;
   color: white;
 }
 

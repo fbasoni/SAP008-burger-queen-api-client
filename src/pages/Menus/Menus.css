@@ -1,0 +1,17 @@
+.menu-main {
+  background-color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.welcome {
+  color: #B9411C;
+}
+.menu-items {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-left: 31rem;
+  margin-top: 5rem;
+}

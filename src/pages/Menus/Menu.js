@@ -1,12 +1,13 @@
-import "../Menus/menuButton.css";
+import "../Menus/Menus.css"
+import MenuButton from "../../components/Products/menu/MenuButton"
+import Cart from "../../components/Products/Cart/Cart";
+
 
 import { getProducts, getSession} from "../../data/api";
- //import { getToken } from "../../data/api.js";
 import { useState, useEffect } from "react";
 import ProductsCard from "../../components/Products/Products"; 
 
 export function Menu() {
- // console.log("Menu")
 
  const [products, setProducts] = useState([]);
  const [menuType, setMenuType] = useState([]);
@@ -34,16 +35,37 @@ export function Menu() {
 
 
   return (
-    <div>
-      <h1> 🍗 Welcome, {session.name}</h1>
+    <div className="menu-main">
+      <p className="welcome">Welcome, {session.name}</p>
       <section>
-        <input className="clientInput" onChange={(e) => setClient(e.target.value)} type="text" placeholder="Enter client name" ></input>
-        <p>Client:{client}</p>
-        <br></br>
-        <button type="button" id="Breakfast-btn" className="menuButton" onClick={menuBreakfast}>Breakfast</button>
-        <button type="button" id="Allday-btn" className="menuButton" onClick={menuAllDay}>All-day</button>
-        {menuType.map((product) => <ProductsCard key={product.id}>{product}</ProductsCard>)}
+        <input
+          className="clientInput"
+          onChange={(e) => setClient(e.target.value)}
+          type="text"
+          placeholder="Enter client name"
+        ></input>
+        <p>Customer:{client}</p>
+        <MenuButton
+          className="products-box"
+          type="button"
+          id="Breakfast-btn"
+          value="Breakfast"
+          onClick={menuBreakfast}
+        />
+        <MenuButton
+          className="products-box"
+          type="button"
+          id="Allday-btn"
+          value="All-Day"
+          onClick={menuAllDay}
+        />
+        <section className="menu-items">
+          {menuType.map((product) => (
+            <ProductsCard key={product.id}>{product}</ProductsCard>
+          ))}
+        </section>
       </section>
+      <Cart></Cart>
     </div>
   );
 }
