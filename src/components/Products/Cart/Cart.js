@@ -1,15 +1,17 @@
 import styles from './Cart.module.css'
 
-
-function Cart() {
+function Cart({text, clientName, total, handleOnClick}) {
   return (
     <>
-      <div className={styles.cart}>
-        <h1>Guest check</h1>
-        <div>
-          <p>Total:</p>
-          <span>$ 25</span>
-        </div>
+      <div className={styles.cartContainer}>
+        <section className={styles.cart}>
+          <h1 className={styles.cartTitle}>Guest check</h1>
+          <p className={styles.customerInfo}>Nome do cliente:{clientName}</p>
+          <p className={styles.productsTotal}>Total: R${total}</p>
+        </section>
+        <button className={styles.orderBtn} onClick={handleOnClick}>
+          Send order
+        </button>
       </div>
     </>
   );

@@ -1,7 +1,8 @@
 import "../Menus/Menus.css"
+import styles from '../Menus/Menus.css'
 import MenuButton from "../../components/Products/menu/MenuButton"
 import Cart from "../../components/Products/Cart/Cart";
-
+import Input from "../../components/Forms/input/Input";
 
 import { getProducts, getSession} from "../../data/api";
 import { useState, useEffect } from "react";
@@ -37,13 +38,13 @@ export function Menu() {
   return (
     <div className="menu-main">
       <p className="welcome">Welcome, {session.name}</p>
-      <section>
-        <input
-          className="clientInput"
+      <section className="menu-page">
+        <Input
+          className={styles.clientInput}
           onChange={(e) => setClient(e.target.value)}
           type="text"
           placeholder="Enter client name"
-        ></input>
+        ></Input>
         <p>Customer:{client}</p>
         <MenuButton
           className="products-box"
