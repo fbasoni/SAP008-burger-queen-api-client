@@ -1,7 +1,44 @@
+.cartContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+  width: 30vw;
+  margin-left: 2rem;
+}
+
 .cart {
   background-color: rgb(173, 173, 173);
   width: 30vw;
   margin-left: 2rem;
-  min-height: 10vh;
+  min-height: 15vh;
   margin-top: -50rem;
+  border: 2px solid #B9411C;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.cartTitle {
+  align-self: center;
+  color: #B9411C;
+}
+
+.customerInfo, .productsTotal {
+  margin-left: 1rem;
+  color: black;
+}
+
+.orderBtn {
+  align-self: flex-end;
+  font-size: 18px;
+  width: 8rem;
+  padding: 0.5rem;
+  background-color: #272735;
+  border-radius: 15px;
+  color: white;
+}
+
+.orderBtn:focus {
+  cursor: pointer;
 }

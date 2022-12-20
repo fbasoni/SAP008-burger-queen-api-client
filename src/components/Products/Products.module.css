@@ -55,13 +55,14 @@
 .productButtons {
   display: flex;
   flex-direction: row;
-  gap: 0.5rem;
+  gap: 1.5rem;
   background: #ffffff;
 }
 
-.productSigns {
-  width: 3rem;
+.sign {
+  width: 1.5rem;
   height: 3rem;
+  color: black;
 }
 
 .productButtonCount {

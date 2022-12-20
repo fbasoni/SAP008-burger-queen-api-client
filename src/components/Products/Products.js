@@ -1,6 +1,5 @@
 import styles from "./Products.module.css";
-import plus from '../../Assets/icons/plusSign.svg';
-import minus from '../../Assets/icons/minusSign.svg';
+import { AiOutlinePlus, AiOutlineLine } from "react-icons/ai";
 
 function ProductsCard({children}) {
   return (
@@ -18,17 +17,9 @@ function ProductsCard({children}) {
           <p className={styles.productPrice}>Price: {children.price}</p>
           <div className={styles.productButtonCount}>
             <div className={styles.productButtons}>
-              <img
-                alt="plus-sign"
-                className={styles.productSigns}
-                src={plus}
-              ></img>
+              <AiOutlinePlus className={styles.sign}></AiOutlinePlus>
               <span className={styles.productCount}>0</span>
-              <img
-                alt="minus-sign"
-                className={styles.productSigns}
-                src={minus}
-              ></img>
+              <AiOutlineLine className={styles.sign}></AiOutlineLine>
             </div>
           </div>
         </div>
