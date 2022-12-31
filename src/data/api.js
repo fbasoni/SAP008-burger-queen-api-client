@@ -39,18 +39,11 @@ export const createToken = async (email, password) => {
 };
 
 export const getSession = () => {
-  try {
    return JSON.parse(localStorage.getItem('session'))
-  } catch (e) {
-   return null
-  }
-   }
+}
 
 export const getProducts = async () => {
   const session = getSession();
-  if (session === null) {
-    return false
-  }
   const url = getUrlEndpoint('products');
 
   const getOptions = {
