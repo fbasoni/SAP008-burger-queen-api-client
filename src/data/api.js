@@ -51,7 +51,6 @@ export const getProducts = async () => {
     headers: {
       'Content-Type': 'application/json',
       'Authorization': session.token,
-      // 'Authorization': getToken("token"),
     },
   }
   return await fetch(url, getOptions)
